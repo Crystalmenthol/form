@@ -45,6 +45,7 @@ export class LandingComponent {
 
   check(value: string): void {
     value? this.showEmp = this.employees.filter(employee => employee.name == value) : this.showEmp = this.employees;
+    console.log(this.showEmp);
   }
   
 }

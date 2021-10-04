@@ -18,7 +18,7 @@
             <th class="col-3">Working Hour</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody *ngIf="showEmp.length">
           <tr *ngFor="let employee of showEmp">
             <td class="col-3">{{employee.id}}</td>
             <td class="col-3">{{employee.name}}</td>
@@ -27,6 +27,7 @@
           </tr>
         </tbody>
       </table>
+      <p *ngIf="!showEmp.length" class="d-flex justify-content-center">Not Found</p>
     </div>
   </div>
 </div>
