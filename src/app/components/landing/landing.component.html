@@ -1,0 +1,32 @@
+<div class="container pt-5">
+  <div class="row justify-content-end">
+    <div class="col-3">
+      <div class="input-group">
+        <input #search type="text" class="form-control" placeholder="search keyword" (keyup.enter)="check(search.value)"/>
+        <button class="btn btn-success" type="button" (click)="check(search.value)">search</button>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center pt-5">
+    <div class="col-10">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th class="col-3">Id</th>
+            <th class="col-3">Name</th>
+            <th class="col-3">Task</th>
+            <th class="col-3">Working Hour</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of showEmp">
+            <td class="col-3">{{employee.id}}</td>
+            <td class="col-3">{{employee.name}}</td>
+            <td class="col-3">{{employee.task}}</td>
+            <td class="col-3">{{employee.workingHour}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
